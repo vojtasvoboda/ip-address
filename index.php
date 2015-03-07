@@ -12,16 +12,21 @@
             html { overflow-y: scroll; text-align: center; }
             body { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
             h1 { font-size: 3em; margin-top: 20px; }
+            h1.ipv6 { font-size: 1em; }
             .clr { float: none; width: 100%; height: 1px; clear: both; }
             #badge { display: none; }
+            @media (min-width: 500px) {
+                h1.ipv6 { font-size: 1em; }
+            }
             @media (min-width: 700px) {
                 h1 { font-size: 6em; margin-top: 15%; }
+                h1.ipv6 { font-size: 2em; }
                 #badge { display: block; position: absolute; top: 0; right: 0; }
             }
+            @media (min-width: 1200px) {
+                h1.ipv6 { font-size: 4em; }
+            }
         </style>
-        <script>
-            var dataLayer = dataLayer || [];
-        </script>
     </head>
     <body>
 
@@ -35,8 +40,10 @@
         })(window,document,'script','dataLayer','GTM-KX55DS');</script>
         <!-- End Google Tag Manager -->
 
+        <?php $ip = $_SERVER['REMOTE_ADDR']; ?>
+
         <div class="wrapper">
-            <h1><?php echo $_SERVER['REMOTE_ADDR']; ?></h1>
+            <h1<?php if ( strlen($ip) > 16 ) echo " class='ipv6'"; ?>><?=$ip?></h1>
             <div class="clr"></div>
         </div>
 
