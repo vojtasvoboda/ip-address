@@ -40,7 +40,7 @@
         })(window,document,'script','dataLayer','GTM-KX55DS');</script>
         <!-- End Google Tag Manager -->
 
-        <?php $ip = $_SERVER['REMOTE_ADDR']; ?>
+        <?php $ip = isset($_SERVER['HTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : $_SERVER['REMOTE_ADDR']; ?>
 
         <div class="wrapper">
             <h1<?php if ( strlen($ip) > 16 ) echo " class='ipv6'"; ?>><?=$ip?></h1>
