@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -29,21 +28,20 @@
         </style>
     </head>
     <body>
-
         <!-- Google Tag Manager -->
-        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KX55DS"
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W78TWZ4"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KX55DS');</script>
+        })(window,document,'script','dataLayer','GTM-W78TWZ4');</script>
         <!-- End Google Tag Manager -->
 
         <?php $ip = isset($_SERVER['HTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : $_SERVER['REMOTE_ADDR']; ?>
 
         <div class="wrapper">
-            <h1<?php if ( strlen($ip) > 16 ) echo " class='ipv6'"; ?>><?=$ip?></h1>
+            <h1<?php if (strlen($ip) > 16) echo " class='ipv6'"; ?>><?=$ip?></h1>
             <div class="clr"></div>
         </div>
 
@@ -52,6 +50,5 @@
                 <img src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
             </a>
         </div>
-
     </body>
 </html>
