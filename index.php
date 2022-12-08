@@ -38,7 +38,7 @@
         })(window,document,'script','dataLayer','GTM-W78TWZ4');</script>
         <!-- End Google Tag Manager -->
 
-        <?php $ip = isset($_SERVER['HTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : $_SERVER['REMOTE_ADDR']; ?>
+        <?php $ip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']; ?>
 
         <div class="wrapper">
             <h1<?php if (strlen($ip) > 16) echo " class='ipv6'"; ?>><?=$ip?></h1>
